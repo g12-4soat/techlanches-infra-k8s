@@ -17,32 +17,39 @@ resource "aws_eks_cluster" "eks-techlanches" {
 }
 
 resource "aws_eks_node_group" "techlanches-node" {
-  ami_type      = "AL2_x86_64"
-  capacity_type = "ON_DEMAND"
+  ami_type      = var.nodeAmiType
+  capacity_type = var.nodeCapacityType
   cluster_name  = var.eksName
-  disk_size     = 20
+  disk_size     = var.nodeDiskSize
 
   instance_types = [
-    "t3.medium"
+    var.nodeInstanceType
   ]
 
-  node_group_name = "techlanches-node"
+  node_group_name = var.nodeGroupName
   node_role_arn   = data.aws_iam_role.name.arn
-  release_version = "1.29.0-20240213"
   subnet_ids      = [for subnet in data.aws_subnet.selected : subnet.id if subnet.availability_zone != "us-east-1e"]
-  version         = "1.29"
+  version         = var.eksVersion
 
   scaling_config {
     desired_size = 1
-    max_size     = 1
     min_size     = 1
+    max_size     = 2
   }
+
+  depends_on = [aws_eks_cluster.eks-techlanches]
 }
 
 resource "aws_eks_addon" "aws_ebs_csi_driver" {
   cluster_name                = var.eksName
-  addon_name                  = "aws-ebs-csi-driver"
-  addon_version               = "v1.28.0-eksbuild.1"
+  addon_name                  = var.ebsAddonName
+  addon_version               = var.ebsAddonVersion
   resolve_conflicts_on_create = "NONE"
   resolve_conflicts_on_update = "NONE"
+
+  depends_on = [aws_eks_cluster.eks-techlanches]
 }
+
+
+
+
