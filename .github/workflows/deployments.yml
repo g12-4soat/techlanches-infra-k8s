@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  teste:
     name: Apply Deployments
     runs-on: ubuntu-latest
     
