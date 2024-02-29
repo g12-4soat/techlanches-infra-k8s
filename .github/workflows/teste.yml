@@ -2,16 +2,3 @@ name: Apply Deployments
 
 on:
   workflow_dispatch:
-
-jobs:
-  deploy:
-    name: Apply Deployments
-    runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: src
-
-    steps:
-      - name: Hello World
-        run: echo "Hello, world! This is a message from the GitHub Action."
