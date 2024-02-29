@@ -1,13 +1,14 @@
-name: Apply Deployments
+name: Hello World Action
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  teste:
-    name: teste-hello
+  hello_world_job:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Hello World
-        run: echo "Hello, world! This is a message from the GitHub Action."
+      - name: Say Hello
+        run: echo "Hello, world!"
