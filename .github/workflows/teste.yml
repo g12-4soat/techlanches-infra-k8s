@@ -5,7 +5,7 @@ on:
 
 jobs:
   teste:
-    name: Apply Deployments
+    name: teste-hello
     runs-on: ubuntu-latest
     
     steps:
