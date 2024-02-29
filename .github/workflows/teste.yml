@@ -2,3 +2,12 @@ name: Apply Deployments
 
 on:
   workflow_dispatch:
+
+jobs:
+  teste:
+    name: Apply Deployments
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello World
+        run: echo "Hello, world! This is a message from the GitHub Action."
