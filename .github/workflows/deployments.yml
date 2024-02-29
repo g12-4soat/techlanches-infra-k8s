@@ -1,9 +1,8 @@
 name: Apply Deployments
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [trigger-eks-deployment]
   workflow_dispatch:
 
 jobs:
