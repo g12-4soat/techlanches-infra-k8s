@@ -1,1 +1,15 @@
+name: Apply Deployments
 
+on:
+  repository_dispatch:
+    types: [trigger-eks-deployment]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Apply Deployments
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello World
+        run: echo "Hello, world! This is a message from the GitHub Action."
