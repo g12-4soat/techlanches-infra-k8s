@@ -1,8 +1,6 @@
 name: Apply Deployments
 
 on:
-  repository_dispatch:
-    types: [trigger-eks-deployment]
   workflow_dispatch:
 
 jobs:
