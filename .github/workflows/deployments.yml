@@ -1,9 +1,10 @@
 name: Apply Deployments
 
 on:
-  repository_dispatch:
-    types: [trigger-eks-deployment]
+  push:
   workflow_dispatch:
+  repository_dispatch:
+    types: [deployment]
 
 jobs:
   teste:
@@ -11,5 +12,5 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Hello World
-        run: echo "Hello, world! This is a message from the GitHub Action."
+      - name: AWS Deployment
+        run: echo "Deploying..."
