@@ -2,7 +2,6 @@
 
 # For Unix-like operating systems (Linux Distros, Mac OS ...)
 # /> chmod +x apply-all.sh
-ls -l
 # Apply all files (including subdirectories)
 kubectl apply -f ./k8s/metrics/metrics.yaml
 kubectl apply -f ./k8s/techlanches-namespace.yaml
