@@ -22,6 +22,9 @@ spec:
             requests:
               cpu: "500m"
               memory: "500Mi"
+          env:
+            - name: DOTNET_ENVIRONMENT
+              value: "Production"
           readinessProbe:
             tcpSocket:
               port: 5000
