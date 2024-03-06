@@ -24,14 +24,6 @@ spec:
             requests:
               cpu: "500m"
               memory: "500Mi"
-          env:
-            - name: ASPNETCORE_ENVIRONMENT
-              value: "Production"
-            - name: ConnectionStrings__DefaultConnection
-              valueFrom:
-                secretKeyRef:
-                  name: techlanches-secrets
-                  key: DefaultConnection
           livenessProbe:
             httpGet:
               path: /health

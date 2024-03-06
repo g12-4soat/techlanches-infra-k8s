@@ -47,7 +47,7 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   resolve_conflicts_on_create = "NONE"
   resolve_conflicts_on_update = "NONE"
 
-  depends_on = [aws_eks_cluster.eks-techlanches]
+  depends_on = [aws_eks_node_group.techlanches-node]
 }
 
 
