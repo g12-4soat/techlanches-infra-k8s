@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "techlanches-terraform-eks-gabriel"
+    bucket = "techlanches-terraform-eks"
     key    = "techlanches-k8s/terraform.tfstate"
     region = "us-east-1"
   }
