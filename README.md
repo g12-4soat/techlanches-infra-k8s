@@ -77,6 +77,6 @@ Da raiz do repositório, entre no diretório _**./k8s**_ _(onde se encontram tod
 ---
 # Dependências
 - [Terraform](https://www.terraform.io/)
-
+- [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 ---
 # Visite a nossa [Wiki](https://github.com/g12-4soat/tech-lanches/wiki)
