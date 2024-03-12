@@ -21,3 +21,16 @@ data "aws_subnet" "selected" {
 
   id = each.value
 }
+
+data "aws_security_group" "eks-sg" {
+  id = aws_eks_cluster.eks-techlanches.vpc_config[0].cluster_security_group_id
+}
+
+data "terraform_remote_state" "rds" {
+  backend = "s3"
+  config = {
+    bucket = "techlanches-terraform-db"
+    key    = "techlanches-infra-db/terraform.tfstate"
+    region = "us-east-1"
+  }
+}

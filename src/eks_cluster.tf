@@ -50,6 +50,17 @@ resource "aws_eks_addon" "aws_ebs_csi_driver" {
   depends_on = [aws_eks_node_group.techlanches-node]
 }
 
+resource "aws_security_group_rule" "allow_eks_to_rds" {
+  type                     = "ingress"
+  from_port                = 1433
+  to_port                  = 1433
+  protocol                 = "tcp"
+  security_group_id        = data.terraform_remote_state.rds.outputs.security_group_id
+  source_security_group_id = data.aws_security_group.eks-sg.id
+}
 
-
-
+resource "aws_security_group" "eks-sg" {
+  name        = "eks-default-sg"
+  description = "Default security group for the EKS cluster"
+  vpc_id      = aws_eks_cluster.eks-techlanches.vpc_config[0].vpc_id
+}
