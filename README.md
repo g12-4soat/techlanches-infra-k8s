@@ -71,9 +71,12 @@ Da raiz do repositório, entre no diretório _**./k8s**_ _(onde se encontram tod
 
 ### Unix Systems (Linux distros | MacOS)
 > $ exec apply-all.sh
+> 
+</details>
 
+---
 # Dependências
 - [Terraform](https://www.terraform.io/)
 
-
 ---
+# Visite a nossa [Wiki](https://github.com/g12-4soat/tech-lanches/wiki)
