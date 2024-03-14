@@ -48,6 +48,8 @@ kind: Service
 metadata:
   name: techlanches-api-service
   namespace: techlanches
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: nlb
 spec:
   selector:
     app: techlanches-api
