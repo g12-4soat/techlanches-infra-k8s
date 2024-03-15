@@ -23,7 +23,7 @@ variable "nodeDiskSize" {
 }
 
 variable "nodeInstanceType" {
-  default = "t3.medium"
+  default = "c3.xlarge"
 }
 
 variable "nodeCapacityType" {
