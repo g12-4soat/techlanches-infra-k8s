@@ -78,5 +78,12 @@ Da raiz do repositório, entre no diretório _**./k8s**_ _(onde se encontram tod
 # Dependências
 - [Terraform](https://www.terraform.io/)
 - [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+---
+## Pipeline Status
+| Pipeline | Status |
+| --- | --- | 
+| Deploy EKS Infrastructure| [![Deploy EKS Infrastructure](https://github.com/g12-4soat/techlanches-infra-k8s/actions/workflows/pipeline.yml/badge.svg)](https://github.com/g12-4soat/techlanches-infra-k8s/actions/workflows/pipeline.yml)
+|Apply K8s Deployments| [![Apply K8s Deployments](https://github.com/g12-4soat/techlanches-infra-k8s/actions/workflows/deployments.yml/badge.svg)](https://github.com/g12-4soat/techlanches-infra-k8s/actions/workflows/deployments.yml)
 ---
 # Visite a nossa [Wiki](https://github.com/g12-4soat/tech-lanches/wiki)
