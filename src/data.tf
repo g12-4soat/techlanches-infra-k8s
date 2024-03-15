@@ -29,8 +29,8 @@ data "aws_security_group" "eks-sg" {
 data "terraform_remote_state" "rds" {
   backend = "s3"
   config = {
-    bucket = "techlanches-terraform-db"
-    key    = "techlanches-infra-db/terraform.tfstate"
+    bucket = "tech-lanches-terraform"
+    key    = "tech-lanches-terraform-db/terraform.tfstate"
     region = "us-east-1"
   }
 }
