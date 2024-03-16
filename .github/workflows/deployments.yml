@@ -1,7 +1,6 @@
 name: Apply Deployments
 
 on:
-  push:
   workflow_dispatch:
   repository_dispatch:
     types: [deployment]
