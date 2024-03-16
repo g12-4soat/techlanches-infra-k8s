@@ -71,6 +71,8 @@ resource "aws_eks_addon" "vpc_cni" {
   addon_version               = "v1.16.0-eksbuild.1"
   resolve_conflicts_on_create = "OVERWRITE"
   resolve_conflicts_on_update = "OVERWRITE"
+
+  depends_on = [aws_eks_node_group.techlanches-node]
 }
 
 resource "aws_eks_addon" "kube_proxy" {
