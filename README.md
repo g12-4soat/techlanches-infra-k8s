@@ -74,6 +74,13 @@ Da raiz do repositório, entre no diretório _**./k8s**_ _(onde se encontram tod
 > 
 </details>
 
+<details>
+  <summary>Versões</summary>
+
+## Software
+- Terraform - >= 0.13
+</details>
+
 ---
 # Dependências
 - [Terraform](https://www.terraform.io/)
